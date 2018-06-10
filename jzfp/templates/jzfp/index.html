@@ -1,0 +1,34 @@
+{% load staticfiles %}
+<head>
+    <meta charset="UTF-8">
+    <title>人员列表</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'css/jzfp.css' %}">
+</head>
+<div>
+    <h1><a href = '/'>查询工具</a></h1>
+</div>
+
+{% if person_list %}
+<ul>
+    <table border="1">
+    <tr>
+        <th>姓名</th>
+        <th>身份证号</th>
+        <th>乡镇</th>
+        <th>村</th>
+    </tr>
+    {% for person in person_list %}
+        <tr>
+            <td>{{ person.name}}</td>
+            <td>{{person.id_num}}</td>
+            <td>{{person.township}}</td>
+            <td>{{person.village }}</td>
+        </tr>
+    {% endfor %}
+    </table>
+</ul>
+{% else %}
+    <p>查询不到相关人员信息.</p>
+{% endif %}

@@ -1,0 +1,32 @@
+{% load staticfiles %}
+<head>
+    <meta charset="UTF-8">
+    <title>详细信息</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'css/jzfp.css' %}">
+</head>
+<div>
+    <h1><a href = '/'>查询工具</a></h1>
+</div>
+{#<h1>{{ person.id_num }}</h1>#}
+{#<ul>#}
+{#    <li>{{ person.name }}</li>#}
+{#    <li>{{ person.township }}</li>#}
+{#    <li>{{ person.village }}</li>#}
+{#</ul>#}
+<table border="1">
+<tr>
+    <th>姓名</th>
+    <th>身份证号</th>
+    <th>乡镇</th>
+    <th>村</th>
+</tr>
+<tr>
+    <td>{{ person.name }}</td>
+    <td>{{ person.id_num }}</td>
+    <td>{{ person.township }}</td>
+    <td>{{ person.village }}</td>
+</tr>
+</table>
+

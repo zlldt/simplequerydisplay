@@ -1,0 +1,42 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>查找人员</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'css/jzfp.css' %}">
+</head>
+<body>
+<div>
+    <h1><a href = '/'>查询工具</a></h1>
+    <p>输入身份证号或者姓名进行查询：</p>
+</div>
+    <form action="/jzfp/search/" method="get">
+        <input type="text" name="q">
+{#        <input type="submit" value="搜索">#}
+        <button type="submit" class="btn btn-purple btn-sm">
+                    查询
+                    <i class="ace-icon fa fa-search icon-on-right bigger-110"></i>
+                </button>
+
+{#        <!-- Search Page BEGINS-->#}
+{#        <div class="col-xs-12">#}
+{#            <form method="get" action="/search">{% csrf_token %}#}
+{#                <!--放置搜索栏内容-->#}
+{#                {% block search %}#}
+{#                {% endblock %}#}
+{#                <div class="col-sm-3">#}
+{#                        <span class="input-group-btn">#}
+{#                           <button type="submit" class="btn btn-purple btn-sm">#}
+{#                                        查询#}
+{#                                        <i class="ace-icon fa fa-search icon-on-right bigger-110"></i>#}
+{#                                    </button>#}
+{#                        </span>#}
+{#                </div>#}
+{#            </form>#}
+{#        </div>#}
+{#        <!-- Search Page END -->#}
+</body>
+</html>
