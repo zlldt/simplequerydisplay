@@ -38,5 +38,12 @@
 {#            </form>#}
 {#        </div>#}
 {#        <!-- Search Page END -->#}
+{% if errmsg %}
+        <ul>
+            {% for error in errmsg %}
+            <li>{{ error }}</li>
+            {% endfor %}
+        </ul>
+{% endif %}
 </body>
 </html>
